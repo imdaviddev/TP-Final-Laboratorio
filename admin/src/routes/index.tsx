@@ -1,7 +1,14 @@
-import React from 'react'
+import { Inicio } from '../pages';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-export const index = () => {
-  return (
-    <></>
-  )
-}
+const Router = () => {
+  return <>
+  <BrowserRouter>
+    <Routes>
+      <Route  element={<Inicio/>} path='/' />
+    </Routes>
+  </BrowserRouter>
+  </>
+};
+
+export default Router;
