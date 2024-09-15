@@ -1,0 +1,46 @@
+# Node modules
+node_modules/
+
+# Compiled output
+dist/
+build/
+
+# TypeScript
+*.tsbuildinfo
+*.d.ts
+
+# Environment files
+.env
+.env.*
+
+# SQLite database
+database.sqlite
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+
+# Test coverage
+coverage/
+
+# TypeORM migration files
+migrations/
+
+# Jest cache
+jest-cache/
+
+# Package JSON
+package-lock.json
