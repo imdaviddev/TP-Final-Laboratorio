@@ -1,5 +1,6 @@
 import Inicio from "./Inicio";
-
+import Dashboard from './Dashboard'
 export {
-    Inicio
+    Inicio,
+    Dashboard
 }

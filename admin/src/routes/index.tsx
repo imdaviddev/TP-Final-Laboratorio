@@ -1,11 +1,11 @@
-import { Inicio } from '../pages';
+import { Dashboard } from '../pages';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const Router = () => {
   return <>
   <BrowserRouter>
     <Routes>
-      <Route  element={<Inicio/>} path='/' />
+      <Route  element={<Dashboard/>} path='/' />
     </Routes>
   </BrowserRouter>
   </>
