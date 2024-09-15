@@ -1,28 +1,30 @@
 {
   "compilerOptions": {
-    "target": "ES2020",                   // El objetivo de la compilación (ES2020 para compatibilidad moderna)
-    "module": "commonjs",                 // El sistema de módulos a utilizar (CommonJS para Node.js)
-    "lib": ["ES2020"],                    // Bibliotecas que se incluirán en la compilación
-    "outDir": "./dist",                   // Directorio de salida para los archivos compilados
-    "rootDir": "./src",                   // Directorio raíz para los archivos fuente
-    "strict": true,                       // Habilita todas las opciones estrictas de TypeScript
-    "esModuleInterop": true,              // Permite la interoperabilidad con módulos CommonJS
-    "skipLibCheck": true,                 // Omite la verificación de tipo de los archivos de declaración (.d.ts)
-    "forceConsistentCasingInFileNames": true, // Asegura el uso consistente de mayúsculas y minúsculas en los nombres de archivos
-    "resolveJsonModule": true,            // Permite la importación de módulos JSON
-    "noImplicitAny": true,                // Evita el uso del tipo `any` implícito
-    "noEmitOnError": true,                // No emite archivos si hay errores de compilación
-    "baseUrl": "./",                      // Base URL para la resolución de módulos
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020"],
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "noImplicitAny": true,
+    "noEmitOnError": true,
+    "baseUrl": "./",
     "paths": {
-      "*": ["node_modules/*"]             // Configuración de rutas para la resolución de módulos
-    }
+      "*": ["node_modules/*"]
+    },
+    "experimentalDecorators": true, 
+    "emitDecoratorMetadata": true
   },
   "include": [
-    "src/**/*.ts",                         // Archivos a incluir en la compilación
-    "tests/**/*.ts"                        // También incluye los archivos de prueba en la compilación
+    "src/**/*.ts",                         
+    "tests/**/*.ts"                        
   ],
   "exclude": [
-    "node_modules",                       // Directorios a excluir de la compilación
-    "dist"                                // El directorio de salida también se excluye
+    "node_modules",                       
+    "dist"                                
   ]
 }

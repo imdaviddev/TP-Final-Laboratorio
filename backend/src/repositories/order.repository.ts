@@ -22,6 +22,11 @@ export class OrderRepository implements IOrderRepository {
     return order ? this.mapToDTO(order) : null;
   }
 
+  async getAllOrders(): Promise<OrderResponseDTO[]> {
+    const orders = await this.orderRepository.find();
+    return orders.map(this.mapToDTO);
+  }
+
   async updateOrder(id: number, data: UpdateOrderDTO): Promise<OrderResponseDTO | null> {
     const order = await this.getOrderById(id);
     if (order) {

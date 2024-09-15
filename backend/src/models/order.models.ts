@@ -1,28 +1,31 @@
-import { Entity, PrimaryGeneratedColumn, Column, BaseEntity, CreateDateColumn, UpdateDateColumn } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
-// Define la entidad 'Order'
-@Entity('orders')
-export class Order extends BaseEntity {
+@Entity()
+export class Order {
   @PrimaryGeneratedColumn()
-  id: number;
+  id: number = 0;
 
   @Column()
-  customerId: number;
+  customerId: number = 0;
 
   @Column()
-  product: string;
+  product: string = '';
 
-  @Column('decimal')
-  amount: number;
+  @Column()
+  amount: number = 0;
 
-  @CreateDateColumn()
-  createdAt: Date;
+  @Column()
+  createdAt: Date = new Date();
 
-  @UpdateDateColumn()
-  updatedAt: Date;
+  @Column()
+  updatedAt: Date = new Date();
 
-  // Método de instancia para obtener un resumen del pedido
   getOrderSummary(): string {
     return `Order ${this.id} for customer ${this.customerId} is ${this.amount} ${this.product}`;
   }
+
+  constructor(init?: Partial<Order>) {
+    Object.assign(this, init);
+  }
 }
+
